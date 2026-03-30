@@ -1,4 +1,23 @@
+function convertDoller(){
+    var doller =document.getElementById("doller").value;
+    var result =document.getElementById("result");
 
-document.getElementById("demo").innerHTML ="Hello World From js code";
-document.getElementById("demo").style.color ="red";
-document.getElementById("demo").style.background ="blue";
+    result.innerHTML = doller*55;
+
+    if(doller==""){
+        result.innerHTML = "Enter Data";
+        return false;
+    }else if(isNaN(doller)){
+        result.innerHTML = "Enter Number Not Text";
+        return false;
+    }else if (doller<0){
+        result.innerHTML = "Enter Postive Number";
+        return false;  
+    }else if (doller==0){
+        result.innerHTML = "Enter Number Rether Than Zero"
+        return false;
+    }else{
+        result.innerHTML = doller *55 + "Egyption Pound"
+        return false;
+     }
+}
